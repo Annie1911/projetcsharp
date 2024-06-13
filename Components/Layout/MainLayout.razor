@@ -8,27 +8,26 @@
     <main>
 
         <div class="top-row px-4">
-            <AuthorizeView Roles="Admin">
+            <AuthorizeView>
                 <Authorized>
-                    <ul class="nav">
-                        <li>
-                            <NavLink href="admin/manage-entreprises" class="nav-item">Gérer entreprises</NavLink>
-
-                        </li>
-                        <li>
-                            <NavLink href="admin/manage-universites" class="nav-item">Gérer universités</NavLink>
-
-                        </li>
-                        <li>
-                            <NavLink href="admin/membre-de-comite" class="nav-item">Gérer les membres de comité</NavLink>
-
-                        </li>
-                        <li>
-                            <NavLink href="/admin/manage-compte-utilisateur" class="nav-item">Gérer utilisateur</NavLink>
-
-                        </li>
-                    </ul>
+                    <div class="nav-item px-3 fs-5 text-white">
+                        <form action="compte/deconnexion" method="post">
+                            <button class="btn btn-outline-dark" type="submit">
+                                Deconnexion
+                            </button>
+                        </form>
+                    </div>
                 </Authorized>
+                <NotAuthorized>
+                    <div class="d-flex">
+                        <NavLink href="compte/inscrire" class="nav-item fs-5 text-dark text-decoration-none">
+                            Créer un compte
+                        </NavLink>
+                        <NavLink href="compte/connexion" class="nav-item fs-5 text-dark text-decoration-none">
+                            Se connecter
+                        </NavLink>
+                    </div>
+                </NotAuthorized>
             </AuthorizeView>
         </div>
 

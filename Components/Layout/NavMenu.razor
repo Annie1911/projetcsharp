@@ -10,31 +10,37 @@
 
 <div class="nav-scrollable px-4" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
-        <div class="nav-item px-3 fw-bold text-white fs-2 mb-4 text-center">
-            Dashboard
-        </div>
 
-        <AuthorizeView>
+
+        <AuthorizeView Roles="Admin">
+
             <Authorized>
-                <div class="nav-item px-3 fs-5 text-white">
-                    <form action="compte/deconnexion" method="post">
-                        <button class="btn btn-outline-light" type="submit">
-                            Deconnexion
-                        </button>
-                    </form>
+                <div class="nav-item px-3 fw-bold text-white fs-2 mb-4 text-center">
+                    Dashboard
                 </div>
+                <ul class="nav">
+                    <li>
+                        <NavLink href="admin/manage-entreprises" class="nav-link link text-white mb-3 fs-5">Gérer
+                            entreprises</NavLink>
+                    </li>
+                    <li>
+                        <NavLink href="admin/manage-universites" class="nav-link link text-white mb-3 fs-5">Gérer
+                            universités</NavLink>
+
+                    </li>
+                    <li>
+                        <NavLink href="admin/membre-de-comite" class="nav-link link text-white mb-3 fs-5">Gérer les
+                            membres de comité</NavLink>
+
+                    </li>
+                    <li>
+                        <NavLink href="/admin/manage-compte-utilisateur" class="nav-link link text-white mb-3 fs-5">
+                            Gérer utilisateur</NavLink>
+                    </li>
+                </ul>
             </Authorized>
-            <NotAuthorized>
-                <div class="d-flex flex-column gap-3">
-                    <NavLink href="compte/inscrire" class="nav-item px-3 fs-5 text-white text-decoration-none">
-                        Créer un compte
-                    </NavLink>
-                    <NavLink href="compte/connexion" class="nav-item px-3 fs-5 text-white text-decoration-none">
-                        Se connecter
-                    </NavLink>
-                </div>
-            </NotAuthorized>
         </AuthorizeView>
+
 
     </nav>
 </div>
