@@ -1,0 +1,48 @@
+﻿<link rel="stylesheet" href="TopNavMenu.razor.css"/>
+@attribute [Authorize]
+<div class="container-fluid">
+    <header class="d-flex justify-content-between align-items-center px-3 py-2">
+        <div>
+            <NavLink href="/" class="nav-link link">
+                <span class="fs-3 fw-bold text-white">Togo Conference Manager</span>
+            </NavLink>
+        </div>
+        <div>
+            
+            <AuthorizeView>
+                <Authorized >
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="nav-item">
+                            <form action="compte/deconnexion" method="post">
+                                <AntiforgeryToken />
+                                <button type="submit" class="border-0 bg-transparent">
+                                    <span class="text-white fs-6">Déconnexion</span>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="nav-item text-white">
+                            @context.User.Identity!.Name
+                        </div>
+                    </div>
+                    
+                </Authorized>
+                <NotAuthorized>
+                    <div>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <NavLink href="compte/connexion" class="nav-link link text-white fs-5">
+                                    Se connecter
+                                </NavLink>
+                            </li>
+                            <li class="nav-item">
+                                <NavLink href="compte/inscrire" class="nav-link link text-white fs-5">
+                                    S'inscrire
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+    </header>
+</div>

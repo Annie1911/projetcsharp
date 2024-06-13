@@ -1,0 +1,47 @@
+﻿@page "/compte/connexion"
+
+<PageTitle>Connexion</PageTitle>
+
+<div class="offset-3 mt-5">
+    <h3>Veuillez-vous Connecter</h3>
+
+    <div class="">
+        <EditForm Model="ConnecterDto" FormName="ConnexionForm" OnValidSubmit="Connexion">
+            <DataAnnotationsValidator />
+            @if(Error is not null)
+            {
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <strong>@Error</strong>
+                </div>
+            }
+            <div class="form-group mb-3">
+                <label for="Email" class="form-label">E-mail</label>
+                <InputText id="Email" class="form-control" placeholder="Votre E-mail" @bind-Value="ConnecterDto.EmailAddress" />
+                <ValidationMessage For="() => ConnecterDto.EmailAddress" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="Password" class="form-label">Mot de passe</label>
+                <InputText id="Password" class="form-control" type="password" placeholder="Votre mot de passe" @bind-Value="ConnecterDto.Password" />
+                <ValidationMessage For="() => ConnecterDto.Password" />
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-dark" @onclick="@Connexion">Se connecter</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+@code {
+    [SupplyParameterFromForm]
+    private ConnexionDTO ConnecterDto { get; set; } = new();
+
+    private string? Error;
+    private async Task Connexion()
+    {
+        var result = await compteService.ConnexionAsync(ConnecterDto);
+        if(result.Flag)
+        {
+            nvm.NavigateTo("/", true);
+        }
+        Error = result.Message;
+    }
+}

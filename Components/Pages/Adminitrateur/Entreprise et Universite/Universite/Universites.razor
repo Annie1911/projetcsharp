@@ -1,0 +1,56 @@
+﻿@page "/admin/manage-universites"
+@using projetcsharp.Models.Entites
+
+<PageTitle>Université</PageTitle>
+
+<h3>Ajouter une Université</h3>
+<table class="table table-hover">
+
+    @if (universiteList is null || universiteList.Count == 0)
+    {
+        <p class="mt-3 fw-bold">Aucune Université n'est enregistrée</p>
+    }
+    else
+    {
+        <thead>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Auteurs</th>
+        <th>Action</th>
+        </thead>
+        <tbody>
+
+            @foreach (var universite in universiteList)
+            {
+                <tr>
+                    <td>@universite.Id</td>
+                    <td>@universite.Nom</td>
+                    <td>@universite.Auteurs.ToArray()</td>
+                    <td>
+                        <a class="btn btn-outline-primary" href="">Modifier</a>
+                        <button class="btn btn-outline-danger">Supprimer</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    }
+</table>
+<div>
+    <NavLink class="btn btn-outline-dark" href="admin/manage-universites/ajouter">
+        Ajouter une Université
+    </NavLink>
+</div>
+
+@code {
+    List<UniversiteModel> universiteList;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        universiteList = await universiteService.GetAllUniversiteAsync();
+
+        base.OnInitializedAsync();
+
+    }
+}

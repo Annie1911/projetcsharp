@@ -1,0 +1,37 @@
+﻿@page "/admin/manage-universites/ajouter"
+@using projetcsharp.DTO.Entreprises_et_Universites
+
+
+<PageTitle>Universite/Ajouter</PageTitle>
+
+<h3>Ajouter une Universite</h3>
+
+<div class="mb-3">
+    <EditForm Model="universiteDto" FormName="AjouterUniversite">
+        <DataAnnotationsValidator />
+        <AntiforgeryToken />
+        <div class="form-group">
+            <label for="nom" class="form-label">Nom de l'université:</label>
+            <InputText id="nom" class="form-control" @bind-Value="universiteDto.Name" />
+            <ValidationMessage For="@(() => universiteDto.Name)" />
+        </div>
+
+    </EditForm>
+</div>
+<button type="submit" class="btn btn-primary" @onclick="HandleSubmit">Enregistrer</button>
+
+
+@code {
+    [SupplyParameterFromForm]
+    private UniversiteDTO universiteDto { get; set; } = new();
+    private string? Error;
+    public async void HandleSubmit()
+    {
+        var resultat = await universiteService.AddUniversite(universiteDto);
+        if (resultat.Flag)
+        {
+            universiteDto = new();
+        }
+        Error = resultat.Message;
+    }
+}

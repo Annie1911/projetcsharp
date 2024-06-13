@@ -1,0 +1,50 @@
+﻿@page "/participant/conference"
+@using projetcsharp.Models.Entites
+@attribute [Authorize(Roles = "Participant")]
+
+<PageTitle>Participant/Conférence</PageTitle>
+
+<div>
+    <h3>ListeDesConferences</h3>
+
+    @if (conference is null || conference.Count == 0)
+    {
+        <h1>Aucune conférence n'est disponible</h1>
+    } else
+    {
+        <div class="row">
+            @foreach(var conference in Conferences)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@conference.Nom</h5>
+                            <p class="card-text">@conference.Sigle</p>
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text">@conference.Theme</p>
+                                <p class="card-text">@conference.ConferenceStartDate</p>
+                                <p class="card-text">@conference.ConferenceEndDate</p>
+                                <p class="card-text">@conference.RegistrationStartDate</p>
+                                <p class="card-text">@conference.RegistrationEndDate</p>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href=" " class="btn btn-primary">Reserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private List<ConferenceModel> Conferences = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        Conferences = await conferenceService.GetAllConferencesAsync();
+        base.OnInitializedAsync();
+    }
+}

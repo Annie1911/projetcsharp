@@ -1,0 +1,25 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using static Microsoft.AspNetCore.Components.Web.RenderMode
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.JSInterop
+@using projetcsharp
+@using projetcsharp.Components
+
+@using projetcsharp.DTO
+@using projetcsharp.Service
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using projetcsharp.Service.Conference
+@using projetcsharp.Service.Entreprise_et_Universite.Entreprise
+@using projetcsharp.Service.Entreprise_et_Universite.Universite
+
+
+@inject NavigationManager nvm
+@inject ICompte compteService
+@inject IEntreprise entrepriseService
+@inject IUniversite universiteService
+@inject IConference conferenceService

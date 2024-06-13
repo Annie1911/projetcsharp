@@ -1,0 +1,91 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = projetcsharp
+build_property.RootNamespace = projetcsharp
+build_property.ProjectDir = G:\projetcsharp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\projetcsharp
+build_property._RazorSourceGeneratorDebug = 
+
+[G:/projetcsharp/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Acceuil.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NldWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Adminitrateur/Entreprise et Universite/Entreprises/AjouterEntreprise.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbml0cmF0ZXVyXEVudHJlcHJpc2UgZXQgVW5pdmVyc2l0ZVxFbnRyZXByaXNlc1xBam91dGVyRW50cmVwcmlzZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Adminitrateur/Entreprise et Universite/Entreprises/Entreprises.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbml0cmF0ZXVyXEVudHJlcHJpc2UgZXQgVW5pdmVyc2l0ZVxFbnRyZXByaXNlc1xFbnRyZXByaXNlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Adminitrateur/Entreprise et Universite/Universite/AjouterUniversite.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbml0cmF0ZXVyXEVudHJlcHJpc2UgZXQgVW5pdmVyc2l0ZVxVbml2ZXJzaXRlXEFqb3V0ZXJVbml2ZXJzaXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Adminitrateur/Entreprise et Universite/Universite/Universites.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbml0cmF0ZXVyXEVudHJlcHJpc2UgZXQgVW5pdmVyc2l0ZVxVbml2ZXJzaXRlXFVuaXZlcnNpdGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Adminitrateur/Membre de comite/Comite.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbml0cmF0ZXVyXE1lbWJyZSBkZSBjb21pdGVcQ29taXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Adminitrateur/Membre de comite/CreerMembre.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbml0cmF0ZXVyXE1lbWJyZSBkZSBjb21pdGVcQ3JlZXJNZW1icmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Adminitrateur/Utilisateur/Utilisateur.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbml0cmF0ZXVyXFV0aWxpc2F0ZXVyXFV0aWxpc2F0ZXVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Conference/ListDesConferences.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25mZXJlbmNlXExpc3REZXNDb25mZXJlbmNlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Connecter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25uZWN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Inscrire.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbnNjcmlyZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Pages/Participant/ListeDesConferences.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYXJ0aWNpcGFudFxMaXN0ZURlc0NvbmZlcmVuY2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/projetcsharp/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-s2fy82m39l
+
+[G:/projetcsharp/Components/Layout/SideBar.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcU2lkZUJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-fdao6xxr27
+
+[G:/projetcsharp/Components/Layout/TopNavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcVG9wTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-qfntw61v56

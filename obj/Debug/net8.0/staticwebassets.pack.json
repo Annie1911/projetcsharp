@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\projetcsharp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\projetcsharp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\projetcsharp.bundle.scp.css"
+    },
+    {
+      "Id": "G:\\projetcsharp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "G:\\projetcsharp\\wwwroot\\bootstrap\\bootstrap.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Id": "G:\\projetcsharp\\wwwroot\\bootstrap\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.css.map"
+    },
+    {
+      "Id": "G:\\projetcsharp\\wwwroot\\bootstrap\\responsive.css",
+      "PackagePath": "staticwebassets\\bootstrap\\responsive.css"
+    },
+    {
+      "Id": "G:\\projetcsharp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.projetcsharp.props",
+      "PackagePath": "build\\projetcsharp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.projetcsharp.props",
+      "PackagePath": "buildMultiTargeting\\projetcsharp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.projetcsharp.props",
+      "PackagePath": "buildTransitive\\projetcsharp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.projetcsharp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

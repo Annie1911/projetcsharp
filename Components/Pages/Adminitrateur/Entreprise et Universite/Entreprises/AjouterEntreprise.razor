@@ -1,0 +1,36 @@
+﻿@page "/admin/manage-entreprises/ajouter"
+@using projetcsharp.DTO.Entreprises_et_Universites
+
+<PageTitle>Entreprise/Ajouter</PageTitle>
+
+<h3>Ajouter une Entreprise</h3>
+<div class="col-md-8">
+    <div class="fs-5">
+        @Error
+    </div>
+    <EditForm Model="entrepriseDto" method="Post" FormName="AjouterEntreprise" OnInvalidSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
+        <div class="form-group mb-3">
+            <label for="nom">Nom de l'entreprise:</label>
+            <InputText id="nom" class="form-control" @bind-Value="entrepriseDto.Name" />
+            <ValidationMessage For="@(() => entrepriseDto.Name)" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" @onclick="@HandleSubmit">Enregistrer</button>
+    </EditForm>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private EntrepriseDTO entrepriseDto { get; set; } = new();
+    private string Error;
+    public async void HandleSubmit()
+    {
+        var resultat = await entrepriseService.AddEntrepriseAsync(entrepriseDto);
+        if (resultat.Flag)
+        {
+            entrepriseDto = new();
+        }
+        Error = resultat.Message;
+    }
+}
