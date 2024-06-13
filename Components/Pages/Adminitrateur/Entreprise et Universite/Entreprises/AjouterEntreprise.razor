@@ -30,6 +30,8 @@
         if (resultat.Flag)
         {
             entrepriseDto = new();
+            nvm.NavigateTo("admin/manage-entreprises");
+
         }
         Error = resultat.Message;
     }

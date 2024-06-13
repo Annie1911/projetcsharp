@@ -25,7 +25,8 @@
                 <tr>
                     <td>@universite.Id</td>
                     <td>@universite.Nom</td>
-                    <td>@universite.Auteurs.ToArray()</td>
+                    <td>@(universite.Auteurs != null ? universite.Auteurs.ToArray() : new string[0])</td>
+
                     <td>
                         <a class="btn btn-outline-primary" href="">Modifier</a>
                         <button class="btn btn-outline-danger">Supprimer</button>

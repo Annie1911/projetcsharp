@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\projetcsharp\\projetcsharp.csproj": {}
+    "D:\\projetcsharp\\projetcsharp.csproj": {}
   },
   "projects": {
-    "G:\\projetcsharp\\projetcsharp.csproj": {
+    "D:\\projetcsharp\\projetcsharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\projetcsharp\\projetcsharp.csproj",
+        "projectUniqueName": "D:\\projetcsharp\\projetcsharp.csproj",
         "projectName": "projetcsharp",
-        "projectPath": "G:\\projetcsharp\\projetcsharp.csproj",
-        "packagesPath": "C:\\Users\\godswill\\.nuget\\packages\\",
-        "outputPath": "G:\\projetcsharp\\obj\\",
+        "projectPath": "D:\\projetcsharp\\projetcsharp.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "D:\\projetcsharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\godswill\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -84,6 +84,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.2, 8.0.2]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.2, 8.0.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -92,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-preview.3.24204.13/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

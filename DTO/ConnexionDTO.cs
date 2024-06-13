@@ -9,6 +9,7 @@ namespace projetcsharp.DTO
         public string Password { get; set; }
 
         [Required]
+        [EmailAddress]
         [DataType(DataType.EmailAddress)]
         public string EmailAddress { get; set; }
     }

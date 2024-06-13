@@ -13,6 +13,7 @@
             <thead>
             <th>Id</th>
             <th>Nom</th>
+            <th>Auteurs</th>
             <th>Action</th>
             </thead>
             <tbody>
@@ -22,7 +23,8 @@
                 <tr>
                     <td>@entreprise.Id</td>
                     <td>@entreprise.Nom</td>
-                    <td>@entreprise.Auteurs.ToArray()</td>
+                   <td>@(entreprise.Auteurs != null ? entreprise.Auteurs.ToArray() : new string[0])</td>
+
                     <td>
                         <a class="btn btn-outline-primary" href="">Modifier</a>
                         <button class="btn btn-outline-danger">Supprimer</button>

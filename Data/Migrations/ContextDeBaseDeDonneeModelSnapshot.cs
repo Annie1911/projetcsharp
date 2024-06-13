@@ -303,7 +303,6 @@ namespace projetcsharp.Data.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Nom")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -393,7 +392,6 @@ namespace projetcsharp.Data.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Nom")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
