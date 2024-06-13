@@ -18,7 +18,7 @@ namespace projetcsharp.Service.Entreprise_et_Universite.Universite
 
         public async Task<ServiceReponse> AddUniversiteAsync(UniversiteDTO model)
         {
-            var dbUniversite = await _context.Entreprises.FirstOrDefaultAsync(e => e.Nom == model.Name);
+            var dbUniversite = await _context.Universites.FirstOrDefaultAsync(e => e.Nom == model.Name);
             if (dbUniversite != null)
             {
                 return new ServiceReponse(false, "L'Université existe déjà");
