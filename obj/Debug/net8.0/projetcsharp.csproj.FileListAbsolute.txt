@@ -215,8 +215,7 @@ D:\projetcsharp\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.pro
 D:\projetcsharp\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.projetcsharp.props
 D:\projetcsharp\obj\Debug\net8.0\staticwebassets.pack.json
 D:\projetcsharp\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-D:\projetcsharp\obj\Debug\net8.0\scopedcss\Components\Layout\SideBar.razor.rz.scp.css
-D:\projetcsharp\obj\Debug\net8.0\scopedcss\Components\Layout\TopNavMenu.razor.rz.scp.css
+D:\projetcsharp\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 D:\projetcsharp\obj\Debug\net8.0\scopedcss\bundle\projetcsharp.styles.css
 D:\projetcsharp\obj\Debug\net8.0\scopedcss\projectbundle\projetcsharp.bundle.scp.css
 D:\projetcsharp\obj\Debug\net8.0\projetcs.4B4EE787.Up2Date

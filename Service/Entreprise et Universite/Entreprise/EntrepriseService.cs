@@ -18,34 +18,31 @@ namespace projetcsharp.Service.Entreprise_et_Universite.Entreprise
         }
         
         public async Task<ServiceReponse> AddEntrepriseAsync(EntrepriseDTO model)
+{
+    var dbentreprise = await _context.Entreprises.FirstOrDefaultAsync(e => e.Nom == model.Name);
+    if (dbentreprise != null)
+    {
+        return new ServiceReponse(false, "L'entreprise existe déjà");
+    }
+    
+    try
+    {
+        var entreprise = new EntrepriseModel
         {
-            var dbentreprise = await _context.Entreprises.FindAsync(model.Name);
-            if(dbentreprise == null)
-            {
-                return new ServiceReponse(false, "L'entreprise existe déjà");
-            }
-            else
-            {
-                try
-                {
-                    var entreprise = new EntrepriseModel()
-                    {
-                        Nom = model.Name,
-                    };
+            Nom = model.Name,
+        };
 
-                    _context.Entreprises.Add(entreprise);
+        _context.Entreprises.Add(entreprise);
+        await _context.SaveChangesAsync();
+    }
+    catch (Exception ex)
+    {
+        return new ServiceReponse(false, ex.Message);
+    }
 
-                    await _context.SaveChangesAsync();
+    return new ServiceReponse(true, "Entreprise ajoutée");
+}
 
-
-                }
-                catch (Exception ex)
-                {
-                    return new ServiceReponse(false, ex.Message);
-                }
-            }
-            return new ServiceReponse(true, "Entreprise ajoutée");
-        }
 
     public Task<ServiceReponse> DeleteEntrepriseAsync(int Id)
         {

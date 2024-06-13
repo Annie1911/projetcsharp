@@ -16,28 +16,34 @@ namespace projetcsharp.Service.Entreprise_et_Universite.Universite
             _context = context;
         }
 
-        public async Task<ServiceReponse> AddUniversite(UniversiteDTO Model)
+        public async Task<ServiceReponse> AddUniversiteAsync(UniversiteDTO model)
         {
-            var dbUniversite = await _context.Universites.FindAsync(Model.Name);
-            if(dbUniversite.Equals(null))
+            var dbUniversite = await _context.Entreprises.FirstOrDefaultAsync(e => e.Nom == model.Name);
+            if (dbUniversite != null)
             {
-                return new ServiceReponse(false, $"{Model.Name}existe déjà");
+                return new ServiceReponse(false, "L'Université existe déjà");
             }
+
             try
             {
-                var newUniversite = new UniversiteModel()
+                var universite = new UniversiteModel
                 {
-                    Nom = Model.Name,
+                    Nom = model.Name,
                 };
 
-            } catch (Exception ex)
-            {
-                return new ServiceReponse(false, $"{ex.Message}");
+                _context.Universites.Add(universite);
+                await _context.SaveChangesAsync();
             }
-            return new ServiceReponse(true, $"{Model.Name} ajoutée");
+            catch (Exception ex)
+            {
+                return new ServiceReponse(false, ex.Message);
+            }
+
+            return new ServiceReponse(true, "Universite ajoutée");
         }
 
-        public Task<ServiceReponse> DeleteUniversite(int Id)
+
+        public Task<ServiceReponse> DeleteUniversiteAsync(int Id)
         {
             throw new NotImplementedException();
         }
@@ -47,12 +53,12 @@ namespace projetcsharp.Service.Entreprise_et_Universite.Universite
             return await _context.Universites.ToListAsync();
         }
 
-        public Task<UniversiteModel> GetUniversite(int Id)
+        public Task<UniversiteModel> GetUniversiteAsync(int Id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<ServiceReponse> UpdateUniversite(UniversiteDTO Model)
+        public Task<ServiceReponse> UpdateUniversiteAsync(UniversiteDTO Model)
         {
             throw new NotImplementedException();
         }

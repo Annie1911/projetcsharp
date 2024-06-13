@@ -83,10 +83,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-s2fy82m39l
 
-[D:/projetcsharp/Components/Layout/SideBar.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcU2lkZUJhci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-fdao6xxr27
-
-[D:/projetcsharp/Components/Layout/TopNavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcVG9wTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-qfntw61v56
+[D:/projetcsharp/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-zwa3xz9zv5

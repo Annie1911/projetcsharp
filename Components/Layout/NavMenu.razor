@@ -1,0 +1,40 @@
+﻿@attribute [Authorize]
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">projet</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable px-4" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3 fw-bold text-white fs-2 mb-4 text-center">
+            Dashboard
+        </div>
+
+        <AuthorizeView>
+            <Authorized>
+                <div class="nav-item px-3 fs-5 text-white">
+                    <form action="compte/deconnexion" method="post">
+                        <button class="btn btn-outline-light" type="submit">
+                            Deconnexion
+                        </button>
+                    </form>
+                </div>
+            </Authorized>
+            <NotAuthorized>
+                <div class="d-flex flex-column gap-3">
+                    <NavLink href="compte/inscrire" class="nav-item px-3 fs-5 text-white text-decoration-none">
+                        Créer un compte
+                    </NavLink>
+                    <NavLink href="compte/connexion" class="nav-item px-3 fs-5 text-white text-decoration-none">
+                        Se connecter
+                    </NavLink>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+
+    </nav>
+</div>

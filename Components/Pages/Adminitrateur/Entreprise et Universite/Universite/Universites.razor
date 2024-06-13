@@ -3,7 +3,7 @@
 
 <PageTitle>Université</PageTitle>
 
-<h3>Ajouter une Université</h3>
+<h3>Les Universités</h3>
 <table class="table table-hover">
 
     @if (universiteList is null || universiteList.Count == 0)
@@ -15,7 +15,6 @@
         <thead>
         <th>Id</th>
         <th>Nom</th>
-        <th>Auteurs</th>
         <th>Action</th>
         </thead>
         <tbody>
@@ -25,7 +24,6 @@
                 <tr>
                     <td>@universite.Id</td>
                     <td>@universite.Nom</td>
-                    <td>@(universite.Auteurs != null ? universite.Auteurs.ToArray() : new string[0])</td>
 
                     <td>
                         <a class="btn btn-outline-primary" href="">Modifier</a>

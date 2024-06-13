@@ -7,9 +7,9 @@ namespace projetcsharp.Service.Entreprise_et_Universite.Universite
     public interface IUniversite
     {
         Task<List<UniversiteModel>> GetAllUniversiteAsync();
-        Task<UniversiteModel> GetUniversite(int Id);
-        Task<ServiceReponse> AddUniversite(UniversiteDTO Model);
-        Task<ServiceReponse> DeleteUniversite(int Id);
-        Task<ServiceReponse> UpdateUniversite(UniversiteDTO Model);
+        Task<UniversiteModel> GetUniversiteAsync(int Id);
+        Task<ServiceReponse> AddUniversiteAsync(UniversiteDTO Model);
+        Task<ServiceReponse> DeleteUniversiteAsync(int Id);
+        Task<ServiceReponse> UpdateUniversiteAsync(UniversiteDTO Model);
     }
 }

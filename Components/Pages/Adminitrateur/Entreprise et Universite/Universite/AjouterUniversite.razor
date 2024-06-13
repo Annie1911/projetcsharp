@@ -7,9 +7,8 @@
 <h3>Ajouter une Universite</h3>
 
 <div class="mb-3">
-    <EditForm Model="universiteDto" FormName="AjouterUniversite">
+    <EditForm Model="universiteDto" method="post" FormName="AjouterUniversite" OnValidSubmit="HandleSubmit">
         <DataAnnotationsValidator />
-        <AntiforgeryToken />
         <div class="form-group">
             <label for="nom" class="form-label">Nom de l'université:</label>
             <InputText id="nom" class="form-control" @bind-Value="universiteDto.Name" />
@@ -18,19 +17,21 @@
 
     </EditForm>
 </div>
-<button type="submit" class="btn btn-primary" @onclick="HandleSubmit">Enregistrer</button>
+<button type="submit" class="btn btn-primary" @onclick="() => HandleSubmit()">Enregistrer</button>
 
 
 @code {
     [SupplyParameterFromForm]
     private UniversiteDTO universiteDto { get; set; } = new();
     private string? Error;
-    public async void HandleSubmit()
+    public async Task HandleSubmit()
     {
-        var resultat = await universiteService.AddUniversite(universiteDto);
+        var resultat = await universiteService.AddUniversiteAsync(universiteDto);
         if (resultat.Flag)
         {
             universiteDto = new();
+            nvm.NavigateTo("admin/manage-universites");
+
         }
         Error = resultat.Message;
     }

@@ -1,17 +1,38 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="d-flex flex-column">
-    <div class="bg-dark">
-        <TopNavMenu />
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
     </div>
 
-    <main class="d-flex flex-row">
-        <AuthorizeView>
-            <div class="col-md-3 bg-dark px-3 py-2 ">
-                <SideBar />
-            </div>
-        </AuthorizeView>
-        <article class="content px-4 col-md-9">
+    <main>
+
+        <div class="top-row px-4">
+            <AuthorizeView Roles="Admin">
+                <Authorized>
+                    <ul class="nav">
+                        <li>
+                            <NavLink href="admin/manage-entreprises" class="nav-item">Gérer entreprises</NavLink>
+
+                        </li>
+                        <li>
+                            <NavLink href="admin/manage-universites" class="nav-item">Gérer universités</NavLink>
+
+                        </li>
+                        <li>
+                            <NavLink href="admin/membre-de-comite" class="nav-item">Gérer les membres de comité</NavLink>
+
+                        </li>
+                        <li>
+                            <NavLink href="/admin/manage-compte-utilisateur" class="nav-item">Gérer utilisateur</NavLink>
+
+                        </li>
+                    </ul>
+                </Authorized>
+            </AuthorizeView>
+        </div>
+
+        <article class="content px-4">
             @Body
         </article>
     </main>
